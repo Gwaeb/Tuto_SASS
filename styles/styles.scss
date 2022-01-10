@@ -1,0 +1,84 @@
+/*Variables & Mixins*/
+@import "./variables.scss";
+@import "./mixins.scss";
+
+
+.text{
+    @include base-text-styles(green, rgb(7, 43, 7));
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text2{
+    @include base-text-styles(rgb(128, 36, 0));
+    font-family: fantasy;
+}
+.text3{
+    @include base-text-styles(rgb(128, 119, 0));
+    font-family: cursive;
+}
+.text4{
+    @include base-text-styles(rgb(0, 119, 128), rgb(128, 119, 0), border, 1rem solid black);
+    font-family: monospace;
+}
+.text5{
+    @include base-text-styles(red);
+    font-family: 'Courier New', Courier, monospace;
+}
+/*End Variables & Mixins*/
+
+/*********************************************************/
+
+/*Nesting*/
+div{
+    h1{
+        @include base-text-styles(purple);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        span{
+            font-size: 3rem;
+        }
+    }
+    h2{
+        opacity: 0.2;
+    }
+}
+
+section {
+    h1 {
+        @include base-text-styles(rgb(151, 151, 0));
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+        
+        /*le "&" vient empêcher qu'un espace se mette entre le "h1" et le ":hover" */
+        &:hover{
+            background-color: aqua;
+            cursor: pointer;
+        }
+    }
+}
+/*End Nesting*/
+
+/*********************************************************/
+
+/*Inheritance*/
+.div-container{
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.219);
+    font-style: italic;
+}
+
+.section-container{
+    @extend .div-container;
+    background-color: bisque;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+/*End Inheritance*/
+
+/*********************************************************/
+
+/*Operators*/
+.text6{
+    @include base-text-styles(rgb(148, 184, 107));
+    font-family: 'Courier New', Courier, monospace;
+    width: (433px / 1243px) * 100%;
+}
+/*End Operators*/

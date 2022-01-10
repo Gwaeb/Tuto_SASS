@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/*Variables & Mixins*/
+.text {
+  background-color: #072b07;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: green;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: #802400;
+  font-family: fantasy;
+}
+
+.text3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: #807700;
+  font-family: cursive;
+}
+
+.text4 {
+  background-color: #807700;
+  border: 1rem solid black;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: #007780;
+  font-family: monospace;
+}
+
+.text5 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/*End Variables & Mixins*/
+/*********************************************************/
+/*Nesting*/
+div h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: purple;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div h1 span {
+  font-size: 3rem;
+}
+
+div h2 {
+  opacity: 0.2;
+}
+
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: #979700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*le "&" vient empêcher qu'un espace se mette entre le "h1" et le ":hover" */
+}
+
+section h1:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+/*End Nesting*/
+/*********************************************************/
+/*Inheritance*/
+.div-container, .section-container {
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.219);
+          box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.219);
+  font-style: italic;
+}
+
+.section-container {
+  background-color: bisque;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+/*End Inheritance*/
+/*********************************************************/
+/*Operators*/
+.text6 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: #94b86b;
+  font-family: 'Courier New', Courier, monospace;
+  width: 34.83508%;
+}
+
+/*End Operators*/
+/*# sourceMappingURL=styles.css.map */
